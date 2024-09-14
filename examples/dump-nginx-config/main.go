@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tufanbarisyildirim/gonginx/dumper"
-	"github.com/tufanbarisyildirim/gonginx/parser"
+	"github.com/hysios/gonginx/dumper"
+	"github.com/hysios/gonginx/parser"
 )
 
 func dumpConfigToFile(fullConf string, filePath string) error {

@@ -6,7 +6,7 @@ import (
 
 	"gotest.tools/v3/assert"
 
-	"github.com/tufanbarisyildirim/gonginx/parser/token"
+	"github.com/hysios/gonginx/parser/token"
 )
 
 func TestScanner_Lex(t *testing.T) {

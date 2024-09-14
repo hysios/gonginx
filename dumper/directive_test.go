@@ -3,7 +3,7 @@ package dumper
 import (
 	"testing"
 
-	"github.com/tufanbarisyildirim/gonginx/config"
+	"github.com/hysios/gonginx/config"
 )
 
 func TestDirective_ToString(t *testing.T) {

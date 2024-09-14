@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/tufanbarisyildirim/gonginx/config"
-	"github.com/tufanbarisyildirim/gonginx/dumper"
-	"github.com/tufanbarisyildirim/gonginx/parser"
+	"github.com/hysios/gonginx/config"
+	"github.com/hysios/gonginx/dumper"
+	"github.com/hysios/gonginx/parser"
 )
 
 func addCustomDirective(fullConf string, blockName string, directiveName string, directiveValue string) (string, error) {

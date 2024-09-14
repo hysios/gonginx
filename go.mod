@@ -1,4 +1,4 @@
-module github.com/tufanbarisyildirim/gonginx
+module github.com/hysios/gonginx
 
 go 1.23
 

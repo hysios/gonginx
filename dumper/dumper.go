@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/tufanbarisyildirim/gonginx/config"
+	"github.com/hysios/gonginx/config"
 )
 
 var (

@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/tufanbarisyildirim/gonginx/config"
-	"github.com/tufanbarisyildirim/gonginx/parser/token"
+	"github.com/hysios/gonginx/config"
+	"github.com/hysios/gonginx/parser/token"
 )
 
 // Option parsing option
