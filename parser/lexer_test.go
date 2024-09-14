@@ -155,3 +155,32 @@ server {
 	assert.Equal(t, string(tokenString), string(expectJSON))
 	assert.Equal(t, len(actual), len(expect))
 }
+
+func TestScanner_Lex_Variable(t *testing.T) {
+	conf := `
+server {
+    rewrite ^(.*)$ https://${server_name}$1 permanent;
+}`
+	actual := lex(conf).all()
+
+	var expect = token.Tokens{
+		{Type: token.Keyword, Literal: "server", Line: 2, Column: 1},
+		{Type: token.BlockStart, Literal: "{", Line: 2, Column: 8},
+		{Type: token.Keyword, Literal: "rewrite", Line: 3, Column: 5},
+		{Type: token.Keyword, Literal: "^(.*)$", Line: 3, Column: 13},
+		{Type: token.Keyword, Literal: "https://${server_name}$1", Line: 3, Column: 20},
+		{Type: token.Keyword, Literal: "permanent", Line: 3, Column: 45},
+		{Type: token.Semicolon, Literal: ";", Line: 3, Column: 54},
+		{Type: token.BlockEnd, Literal: "}", Line: 4, Column: 1},
+	}
+
+	tokenString, err := json.Marshal(actual)
+	assert.NilError(t, err)
+	expectJSON, err := json.Marshal(expect)
+	assert.NilError(t, err)
+
+	//assert.Assert(t, tokens, 1)
+	assert.Equal(t, string(tokenString), string(expectJSON))
+	assert.Assert(t, actual.EqualTo(expect))
+	assert.Equal(t, len(actual), len(expect))
+}

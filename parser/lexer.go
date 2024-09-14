@@ -233,6 +233,7 @@ func (s *lexer) scanKeyword() token.Token {
 			}
 		}
 		buf.WriteRune(s.read())
+		prev = ch
 	}
 
 	return tok.Lit(buf.String())
