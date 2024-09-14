@@ -1,6 +1,6 @@
 module github.com/hysios/gonginx
 
-go 1.23
+go 1.19
 
 require gotest.tools/v3 v3.5.1
 
