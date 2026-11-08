@@ -1,7 +1,7 @@
 module github.com/hysios/gonginx
 
-go 1.19
+go 1.21
 
-require gotest.tools/v3 v3.5.1
+require gotest.tools/v3 v3.5.2
 
-require github.com/google/go-cmp v0.6.0 // indirect
+require github.com/google/go-cmp v0.7.0 // indirect
